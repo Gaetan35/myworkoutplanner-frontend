@@ -1,6 +1,9 @@
 @import "src/styles/variables";
 
-.test {
-  color: red;
-  font-size: $FONT-SIZE-MEDIUM;
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

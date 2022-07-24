@@ -1,9 +1,13 @@
+import { Layout } from "../../components/layout/Layout";
 import styles from "./Home.module.scss";
 
 export const Home = () => {
   return (
-    <div>
-      <p className={styles.test}>Hello world</p>
-    </div>
+    <Layout>
+      <div className={styles.pageContainer}>
+        <h1>WorkoutPlanner</h1>
+        <p>Coming Soon</p>
+      </div>
+    </Layout>
   );
 };
