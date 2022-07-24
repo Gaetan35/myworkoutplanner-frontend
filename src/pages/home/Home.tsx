@@ -5,7 +5,7 @@ export const Home = () => {
   return (
     <Layout>
       <div className={styles.pageContainer}>
-        <h1>WorkoutPlanner</h1>
+        <h1>MyWorkoutPlanner</h1>
         <p>Coming Soon</p>
       </div>
     </Layout>
