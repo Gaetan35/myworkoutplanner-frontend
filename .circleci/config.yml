@@ -20,10 +20,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Run build
-          command: npm run build
+          command: yarn build
       - run:
           name: Netlify Deploy
-          command: npm run deploy-netlify
+          command: yarn deploy-netlify
 
 workflows:
   deploy:
