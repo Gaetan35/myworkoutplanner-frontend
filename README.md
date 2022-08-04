@@ -1,1 +1,1 @@
-# WorkoutPlanner Frontend
+# MyWorkoutPlanner Frontend
