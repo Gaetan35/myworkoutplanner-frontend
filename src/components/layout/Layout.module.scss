@@ -1,5 +1,62 @@
 @import "src/styles/variables";
 
 .main {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: $DARK-BLUE;
+
+    .leftElement {
+      flex: 1;
+    }
+
+    .title {
+      color: $LIGHT-GREY;
+      font-size: 4rem;
+      font-family: Graduate, cursive;
+    }
+
+    .logoContainer {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+
+      .logo {
+        height: 5rem;
+        margin-left: auto;
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .footer {
+    display: flex;
+    padding: 0.7rem;
+    box-shadow: inset 0 2px 4px rgb(0 0 0 / 25%);
+
+    .pageContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+
+    .pageName {
+      margin-top: 0.4rem;
+      color: $DARK-BLUE;
+      font-size: 1.2rem;
+    }
+  }
 }

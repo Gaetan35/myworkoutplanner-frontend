@@ -7,10 +7,8 @@ export const Home = () => {
 
   return (
     <Layout>
-      <div className={styles.pageContainer}>
-        <h1>{intl.formatMessage({ id: "home.title" })}</h1>
-        <p>{intl.formatMessage({ id: "home.subtitle" })}</p>
-      </div>
+      <h1>{intl.formatMessage({ id: "home.title" })}</h1>
+      <p>{intl.formatMessage({ id: "home.subtitle" })}</p>
     </Layout>
   );
 };
