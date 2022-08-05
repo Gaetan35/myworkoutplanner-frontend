@@ -1,1 +1,23 @@
 @import "src/styles/variables";
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.startButton {
+  padding: 0.5rem 2rem;
+  color: $WHITE-GREY;
+  background-color: $DARK-BLUE;
+  font-size: 4rem;
+  border-radius: 3rem;
+  line-height: 5.9rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $LIGHT-BLUE;
+  }
+}

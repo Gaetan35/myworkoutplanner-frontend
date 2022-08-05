@@ -6,7 +6,6 @@ export default {
     history: "Historique",
   },
   home: {
-    title: "MyWorkoutPlanner",
-    subtitle: "Coming Soon",
+    start: "Start",
   },
 };

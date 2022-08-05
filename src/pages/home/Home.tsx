@@ -1,14 +1,19 @@
 import { useIntl } from "react-intl";
 import { Layout } from "../../components/layout/Layout";
 import styles from "./Home.module.scss";
+import diceBackground from "../../assets/diceBackground.png";
 
 export const Home = () => {
   const intl = useIntl();
 
   return (
     <Layout>
-      <h1>{intl.formatMessage({ id: "home.title" })}</h1>
-      <p>{intl.formatMessage({ id: "home.subtitle" })}</p>
+      <div className={styles.pageContainer}>
+        <img alt="" src={diceBackground} />
+        <button className={styles.startButton}>
+          {intl.formatMessage({ id: "home.start" })}
+        </button>
+      </div>
     </Layout>
   );
 };
