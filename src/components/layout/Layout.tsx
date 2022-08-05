@@ -1,14 +1,17 @@
 import { ReactNode } from "react";
 import { useIntl } from "react-intl";
+import { useNavigate } from "react-router-dom";
 import styles from "./Layout.module.scss";
 import logo from "../../assets/logo.png";
 import { ReactComponent as WeightIcon } from "../../assets/weightIcon.svg";
 import { ReactComponent as StarIcon } from "../../assets/starIcon.svg";
 import { ReactComponent as HistoryIcon } from "../../assets/historyIcon.svg";
+import { ReactComponent as LeftArrow } from "../../assets/leftArrow.svg";
 
 type LayoutProps = {
   children: ReactNode;
   hideFooter?: boolean;
+  previousPage?: string;
 };
 
 const pages = [
@@ -17,13 +20,27 @@ const pages = [
   { icon: <HistoryIcon width={32} height={32} />, labelId: "layout.history" },
 ];
 
-export const Layout = ({ children, hideFooter = false }: LayoutProps) => {
+export const Layout = ({
+  children,
+  hideFooter = false,
+  previousPage,
+}: LayoutProps) => {
   const intl = useIntl();
+  const navigate = useNavigate();
 
   return (
     <div className={styles.main}>
       <header className={styles.header}>
-        <div className={styles.leftElement}></div>
+        <div className={styles.leftElement}>
+          {previousPage !== undefined && (
+            <button
+              className={styles.goBackButton}
+              onClick={() => navigate(previousPage)}
+            >
+              <LeftArrow width={28} height={28} />
+            </button>
+          )}
+        </div>
         <p className={styles.title}>
           {intl.formatMessage({ id: "layout.title" })}
         </p>
