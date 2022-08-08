@@ -1,0 +1,43 @@
+@import "src/styles/variables";
+
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .sliderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 1rem 0.6rem;
+    border: 1px solid $DARK-BLUE;
+    border-radius: 0.4rem;
+
+    .slider {
+      width: 100%;
+      height: 0.5rem;
+      appearance: none;
+      border-radius: 0.4rem;
+      accent-color: $DARK-BLUE;
+    }
+  }
+
+  .sliderValueDescriptionContainer {
+    width: 70%;
+    margin-top: 0.5rem;
+    position: relative;
+
+    .sliderValueDescription {
+      width: 10rem;
+      color: $DARK-BLUE;
+      font-size: 1.3rem;
+      font-weight: $FONT-WEIGHT-BOLD;
+      transform: translateX(-50%);
+      position: absolute;
+      line-height: 1.9rem;
+      text-align: center;
+    }
+  }
+}
