@@ -1,1 +1,81 @@
 @import "src/styles/variables";
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+
+  .sectionTitle {
+    color: $DARK-BLUE;
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+
+  .sessionTypeSection {
+    width: 100%;
+    margin-top: 4rem;
+
+    .radioButtonContainer {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 3rem;
+      accent-color: $DARK-BLUE;
+
+      .flexRow {
+        display: flex;
+        align-items: center;
+
+        .radioButtonLabel {
+          margin-left: 0.8rem;
+          color: $DARK-BLUE;
+          font-size: 2rem;
+          line-height: 2.9rem;
+        }
+      }
+    }
+  }
+
+  .intensitySection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 6rem;
+
+    .sliderContainer {
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .exerciseDifficultySection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 6.5rem;
+
+    .exerciseDifficultyPicker {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .goButton {
+    margin-top: 4rem;
+    padding: 0.5rem 2rem;
+    color: $WHITE-GREY;
+    background-color: $DARK-BLUE;
+    font-size: 4rem;
+    border-radius: 3rem;
+    line-height: 5.9rem;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $LIGHT-BLUE;
+    }
+  }
+}
