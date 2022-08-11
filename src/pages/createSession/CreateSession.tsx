@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useIntl } from "react-intl";
+import { createSearchParams, useNavigate } from "react-router-dom";
 import { Layout } from "../../components/layout/Layout";
 import { routes } from "../../routes/routes";
 import styles from "./CreateSession.module.scss";
@@ -24,9 +25,24 @@ const intensityValues = {
 export const CreateSession = () => {
   const intl = useIntl();
 
+  const navigate = useNavigate();
+
   const [sessionType, setSessionType] = useState<SessionType>();
   const [intensity, setIntensity] = useState(0);
   const [exerciseDifficulty, setExerciseDifficulty] = useState(3);
+
+  const submit = () => {
+    if (sessionType !== undefined) {
+      navigate({
+        pathname: routes.session,
+        search: createSearchParams({
+          sessionType,
+          intensity: intensity.toString(),
+          exerciseDifficulty: exerciseDifficulty.toString(),
+        }).toString(),
+      });
+    }
+  };
 
   return (
     <Layout hideFooter previousPage={routes.home}>
@@ -99,12 +115,7 @@ export const CreateSession = () => {
           </div>
         </div>
 
-        <button
-          className={styles.goButton}
-          onClick={() => {
-            alert("Ouais trop bien le sport");
-          }}
-        >
+        <button className={styles.goButton} onClick={submit}>
           {intl.formatMessage({ id: "createSession.go" })}
         </button>
       </div>
