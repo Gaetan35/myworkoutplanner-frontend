@@ -1,14 +1,17 @@
 @import "src/styles/variables";
 
+$HEADER-HEIGHT: 8rem;
+
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
 
   .header {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: $HEADER-HEIGHT;
     padding: 1.5rem;
     background-color: $DARK-BLUE;
 
