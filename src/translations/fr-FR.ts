@@ -22,4 +22,10 @@ export default {
     exerciseDifficulty: "Difficulté des exercices",
     go: "Go !",
   },
+  session: {
+    yourSession: "Votre séance",
+    breakDuration: "Pause - {duration}",
+    go: "go !",
+    otherSession: "Une autre !",
+  },
 };

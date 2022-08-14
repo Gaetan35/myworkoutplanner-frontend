@@ -1,0 +1,25 @@
+@import "src/styles/variables";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 1.5rem;
+  border: 0.1rem solid $DARK-BLUE;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+
+  .breakDurationText {
+    margin-left: 1.5rem;
+    color: $DARK-BLUE;
+    font-size: 1.6rem;
+    font-weight: $FONT-WEIGHT-BOLD;
+    line-height: 2.4rem;
+  }
+
+  .breakLogo {
+    width: 3.7rem;
+    height: 1.6rem;
+  }
+}
